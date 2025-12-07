@@ -1,0 +1,31 @@
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.error-message {
+    margin: 20px auto;
+    padding: 15px;
+    background: rgba(239, 68, 68, 0.2);
+    border: 1px solid var(--error-color);
+    color: #fca5a5;
+    border-radius: var(--radius-sm);
+    text-align: center;
+    max-width: 600px;
+}
+
+.main-content {
+    padding-bottom: 50px;
+}

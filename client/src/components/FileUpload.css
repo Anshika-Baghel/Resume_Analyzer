@@ -1,0 +1,120 @@
+.upload-container {
+    padding: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.upload-container h2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    background: var(--surface-color);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-family: inherit;
+    resize: vertical;
+    transition: border-color 0.3s;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.file-drop-zone {
+    position: relative;
+}
+
+.file-input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.file-label {
+    display: block;
+    padding: 40px;
+    border: 2px dashed var(--glass-border);
+    border-radius: var(--radius-md);
+    text-align: center;
+    background: var(--surface-color);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.file-input:hover+.file-label,
+.file-input:focus+.file-label {
+    border-color: var(--primary-color);
+    background: var(--surface-hover);
+}
+
+.file-placeholder,
+.file-selected {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.file-placeholder .icon {
+    width: 48px;
+    height: 48px;
+    color: var(--text-secondary);
+}
+
+.file-selected .icon {
+    width: 48px;
+    height: 48px;
+    color: var(--success-color);
+}
+
+.change-text {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    margin-top: 5px;
+}
+
+.full-width {
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

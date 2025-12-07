@@ -1,0 +1,125 @@
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    background: linear-gradient(to right, var(--text-primary), var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 4rem;
+    color: var(--text-secondary);
+}
+
+.history-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 900px) {
+    .history-layout {
+        grid-template-columns: 350px 1fr;
+    }
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.history-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 15px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.history-item:hover,
+.history-item.active {
+    border-color: var(--primary-color);
+    background: var(--surface-hover);
+}
+
+.history-icon {
+    background: rgba(139, 92, 246, 0.1);
+    padding: 10px;
+    border-radius: 50%;
+    color: var(--primary-color);
+}
+
+.history-info {
+    flex: 1;
+}
+
+.history-info h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}
+
+.history-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.date {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.score-badge {
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 700;
+    background: #334155;
+}
+
+.score-badge.good {
+    color: var(--success-color);
+    background: rgba(16, 185, 129, 0.1);
+}
+
+.score-badge.average {
+    color: var(--warning-color);
+    background: rgba(245, 158, 11, 0.1);
+}
+
+.arrow-icon {
+    color: var(--text-secondary);
+}
+
+.details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.btn-close {
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--text-secondary);
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.btn-close:hover {
+    color: var(--text-primary);
+    border-color: var(--text-primary);
+}
