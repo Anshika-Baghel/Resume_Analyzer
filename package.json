@@ -1,27 +1,12 @@
 {
-  "name": "resume--analyzer",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "resume-analyzer",
+  "version": "1.0.0",
+  "description": "Resume Analyzer MERN Stack Project",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.39.1",
-    "@types/react": "^19.2.5",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^5.1.1",
-    "eslint": "^9.39.1",
-    "eslint-plugin-react-hooks": "^7.0.1",
-    "eslint-plugin-react-refresh": "^0.4.24",
-    "globals": "^16.5.0",
-    "vite": "^7.2.4"
+    "server-install": "cd server && npm install",
+    "client-install": "cd client && npm install",
+    "client-build": "cd client && npm run build",
+    "start": "cd server && npm start",
+    "build": "npm run server-install && npm run client-install && npm run client-build"
   }
 }
