@@ -22,4 +22,14 @@ mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/resume-anal
     .then(() => console.log('MongoDB Connected'))
     .catch(err => console.error('MongoDB Connection Error:', err));
 
+// Serve Frontend in Production
+const path = require('path');
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, '../client/dist')));
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, '../client', 'dist', 'index.html'));
+    });
+}
+
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
